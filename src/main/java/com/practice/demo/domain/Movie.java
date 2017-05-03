@@ -2,7 +2,7 @@ package com.practice.demo.domain;
 
 public class Movie {
 
-	private long id;
+	private int id;
 	private String name;
 
 	private String directorName;
@@ -10,7 +10,7 @@ public class Movie {
 	private int movieInStock;
 	private Artist artist;
 
-	public Movie(long id, String name, String directorName, String rating, int movieInStock, Artist artist) {
+	public Movie(int id, String name, String directorName, String rating, int movieInStock, Artist artist) {
 		this.id = id;
 		this.name = name;
 		this.directorName = directorName;
@@ -19,11 +19,11 @@ public class Movie {
 		this.artist = artist;
 	}
 
-	public long getId() {
+	public int getId() {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 

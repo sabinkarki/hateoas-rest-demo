@@ -6,6 +6,14 @@ public class Artist {
 	private String firstname;
 	private String lastname;
 
+	
+	public Artist(int id, String firstname, String lastname) {
+		super();
+		this.id = id;
+		this.firstname = firstname;
+		this.lastname = lastname;
+	}
+
 	public int getId() {
 		return id;
 	}
