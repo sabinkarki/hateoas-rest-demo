@@ -10,6 +10,10 @@ public class Movie {
 	private int movieInStock;
 	private Artist artist;
 
+	public Movie() {
+
+	}
+
 	public Movie(int id, String name, String directorName, String rating, int movieInStock, Artist artist) {
 		this.id = id;
 		this.name = name;

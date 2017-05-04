@@ -1,6 +1,7 @@
 package com.practice.demo.service;
 
-import java.util.Map;
+import java.util.List;
+import java.util.Optional;
 
 import com.practice.demo.domain.Artist;
 import com.practice.demo.domain.Movie;
@@ -8,7 +9,7 @@ import com.practice.demo.domain.Movie;
 public interface MovieService {
 	
 	public Artist getArtist(final String id);
-	public Movie getMovies(int id);
-	public Map<Integer, Movie> getAllMovies();
+	public Optional <Movie> getMovies(int id);
+	public List<Movie> getAllMovies();
 
 }

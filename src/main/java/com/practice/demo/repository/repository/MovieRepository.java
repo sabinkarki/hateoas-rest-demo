@@ -1,17 +1,23 @@
 package com.practice.demo.repository.repository;
+
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.Optional;
+
 import org.springframework.stereotype.Repository;
+
 import com.practice.demo.domain.Artist;
 import com.practice.demo.domain.Movie;
 
 @Repository
 public class MovieRepository {
-	private Map<Integer, Movie> movies;
+	private List<Movie> movies;
 	private Map<Integer, Artist> artists;
 
 	public MovieRepository() {
-		movies = new HashMap<>();
+		movies = new ArrayList<>();
 		artists = new HashMap<>();
 		addArtist();
 
@@ -21,11 +27,12 @@ public class MovieRepository {
 		Movie movie1 = new Movie(1, "Part of Me", "Dan Cutforth and Jane Lipsitz", "5.9/10", 3, artists.get(1));
 		Movie movie2 = new Movie(2, "Titanic", "James Cameron", "7.7/10", 2, artists.get(2));
 		Movie movie3 = new Movie(3, "Charming", "Ross Venokur", "6.7/10", 1, artists.get(3));
+		Movie movie4 = new Movie(4, "Test", "Test", "7.7/10", 0, artists.get(2));
 
-		this.movies.put(movie1.getId(), movie1);
-		this.movies.put(movie2.getId(), movie2);
-		this.movies.put(movie3.getId(), movie3);
-
+		this.movies.add(movie1);
+		this.movies.add(movie2);
+		this.movies.add(movie3);
+		this.movies.add(movie4);
 	}
 
 	public void addArtist() {
@@ -45,11 +52,12 @@ public class MovieRepository {
 		return this.artists.get(id);
 	}
 
-	public Movie getMovies(int id) {
-		return this.movies.get(id);
+	public Optional<Movie> getMovies(int id) {
+		return this.movies.stream().filter(m -> m.getId() == id).findAny();
+
 	}
 
-	public Map<Integer, Movie> getAllMovies() {
+	public List<Movie> getAllMovies() {
 		return this.movies;
 	}
 

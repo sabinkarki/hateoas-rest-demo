@@ -1,6 +1,7 @@
 package com.practice.demo.service.serviceImpl;
 
-import java.util.Map;
+import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -22,12 +23,13 @@ public class MovieServiceImpl implements MovieService {
 	}
 
 	@Override
-	public Movie getMovies(int id) {
+	public Optional<Movie> getMovies(int id) {
+		
 		return movieRepository.getMovies(id);
 	}
 
 	@Override
-	public Map<Integer, Movie> getAllMovies() {
+	public List<Movie> getAllMovies() {
 		return movieRepository.getAllMovies();
 	}
 
