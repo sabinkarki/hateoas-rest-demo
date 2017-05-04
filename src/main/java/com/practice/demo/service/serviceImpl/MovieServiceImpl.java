@@ -18,7 +18,7 @@ public class MovieServiceImpl implements MovieService {
 	private MovieRepository movieRepository;
 
 	@Override
-	public Artist getArtist(String id) {
+	public Artist getArtist(int id) {
 		return movieRepository.getArtist(id);
 	}
 

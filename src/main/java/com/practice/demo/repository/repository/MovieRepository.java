@@ -48,7 +48,7 @@ public class MovieRepository {
 
 	}
 
-	public Artist getArtist(final String id) {
+	public Artist getArtist( int id) {
 		return this.artists.get(id);
 	}
 

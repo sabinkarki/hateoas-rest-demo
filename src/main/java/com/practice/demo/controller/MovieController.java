@@ -107,7 +107,7 @@ public class MovieController {
 		} else {
 			Optional<Movie> movies = movieService.getMovies((int) t);
 			Resource<Movie> resource = new Resource<Movie>(movies.get());
-			resource.add(linkTo(methodOn(MovieController.class).findAllMovies()).withRel("Artist"));
+			resource.add(linkTo(methodOn(MovieController.class).findAllMovies()).withRel("Movies"));
 			return resource;
 
 		}

@@ -8,7 +8,7 @@ import com.practice.demo.domain.Movie;
 
 public interface MovieService {
 	
-	public Artist getArtist(final String id);
+	public Artist getArtist(int id);
 	public Optional <Movie> getMovies(int id);
 	public List<Movie> getAllMovies();
 
