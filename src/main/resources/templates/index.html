@@ -3,9 +3,44 @@
 	xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="ISO-8859-1"></meta>
-<title>Insert title here</title>
+<title>Hateoas-rest-demo</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></link>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-	<h1>Hello Sabin</h1>
+	<div class="container">
+		<h2>HATEOS</h2>
+		<p>JSON RESPONSE</p>
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th>URL</th>
+					<th>Link</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="sucess">
+					<td>MoviesList Response</td>
+					<td><a target="_blank" href="/movies">http://localhost:8080/movies</a></td>
+				</tr>
+				<tr class="info">
+					<td>MovieById Response</td>
+					<td><a target="_blank" href="/movie/1">http://localhost:8080/movie/1</a></td>
+				</tr>
+				<tr class="sucess">
+					<td>ArtistById Response</td>
+					<td><a target="_blank" href="/artist/1">http://localhost:8080/artist/1</a></td>
+				</tr>
+				<tr class="info">
+					<td>BuyMovie Response</td>
+					<td><a target="_blank" href="/artist/1">http://localhost:8080/movie/buy/1</a></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
 </body>
 </html>
